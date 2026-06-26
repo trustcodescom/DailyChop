@@ -518,6 +518,7 @@
 }
 
 .review-text {
+    font-weight: 500;
     line-height: 1.8;
     color: #444;
 }
@@ -535,34 +536,32 @@
     border-radius: 50%;
     object-fit: cover;
 }
-
-.slider-btn {
-    width: 40px;
-    height: 40px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: var(--secondary);
-    color: #fff;
-
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: static;
+.reviews-controls .slider-btn {
+display: none;
 }
-
-.slider-btn:hover {
-    transform: scale(1.05);
-}
-
-.reviews-controls {
+.testimonial-dots {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
-    padding-bottom: 20px;
+    gap: 12px;
+    margin: 30px 0;
 }
 
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #d3d3d3;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: #ff6b35;
+}
 /* footer section */
 .footer {
     background: #2b0b0b;
@@ -818,37 +817,51 @@ Responsiveness For Tablets   Responsiveness For Tablets    Responsiveness For Ta
      .reviews-slider {
         max-width: 750px;
         margin: 50px auto 0;
+        font-size: 22px;
+        line-height: 1.7;
     }
 
     .review-card {
-        padding: 35px;
-    }
-
-    .review-text {
-        font-size: 1.05rem;
+        padding: 15px 95px;
     }
     .reviews-title{
         font-size: 2.3rem;
     }
     .review-user img {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
     }
 
-    .reviews-slider {
-        max-width: 900px;
-    }
-
-    .review-card {
-        padding: 45px;
-    }
 
     .review-text {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+    }
+    .reviews-controls .slider-btn {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background: #ff6b35;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        transition: .3s;
     }
 
-    .reviews-controls {
-        margin-top: 20px;
+    .prev {
+        left: 15px;
+    }
+
+    .next {
+        right: 15px;
+    }
+
+    .slider-btn:hover {
+        transform: translateY(-50%) scale(1.08);
     }
 
     .footer-container {
@@ -881,7 +894,7 @@ Responsiveness For Desktop   Responsiveness For Desktop    Responsiveness For De
 @media (min-width: 1024px) {
     /* Hero */
     .hero-bg-container {
-        height: 550px; 
+        height: 520px; 
         min-height: auto;
     }
 

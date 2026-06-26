@@ -48,6 +48,9 @@ let currentIndex = 0;
 
 function updateSlider() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentIndex].classList.add("active");
 }
 
 nextBtn.addEventListener("click", () => {
@@ -109,3 +112,13 @@ track.addEventListener("touchend", (e) => {
         updateSlider();
     }
 });
+
+// carousel indicators
+const dots = document.querySelectorAll(".dot");
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        currentIndex = index;
+        updateSlider();
+    });
+});
+
