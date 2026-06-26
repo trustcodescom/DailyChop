@@ -14,7 +14,7 @@
 
 /* Outer wrapper freezes at the top of the mobile screen */
 .header {
-    background: #fff;
+    background: var(--white);
     position: fixed;   
     top: 0;
     left: 0;
@@ -67,7 +67,9 @@
     font-size: 18px;
     transition: all 0.25s ease;
 }
-
+.navigation-container{
+    display: flex;
+}
 .nav a:hover {
     background: rgba(255, 107, 53, 0.08);
     transform: translateX(6px);
@@ -117,20 +119,29 @@
 }
 
 .hero-bg-container {
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    /* Move background properties here */
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url("../images/food_2.jpg") center/cover no-repeat;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 20px;
+    text-align:center;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 
+.hero-home{
+    background-image:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("../images/food_2.jpg");
+}
+
+.hero-menu{
+    background-image:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url("../images/menu_hero.jpg");
+}
 
 #intro {
     color: #fff;
@@ -177,17 +188,6 @@
 .btn-primary:hover {
     background: #e55a28;
     border-color: #e55a28;
-    transform: translateY(-3px);
-}
-.btn-secondary {
-    background: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-}
-
-.btn-secondary:hover {
-    background: #fff;
-    color: #222;
     transform: translateY(-3px);
 }
 
@@ -717,6 +717,7 @@ Responsiveness For Tablets   Responsiveness For Tablets    Responsiveness For Ta
         border-radius: 100px; 
         border: none;
         cursor: pointer;
+        text-decoration: none;
         font-weight: 600;
         font-size: 1rem;
         transition: background-color 0.3s ease, transform 0.2s ease;
@@ -735,7 +736,8 @@ Responsiveness For Tablets   Responsiveness For Tablets    Responsiveness For Ta
         padding: 20px;
     }
 
-    .hero-bg-container {
+    .hero-bg-container,
+    .menu-hero-bg {
         height: 400px; 
         min-height: 50vh;
         
@@ -764,16 +766,31 @@ Responsiveness For Tablets   Responsiveness For Tablets    Responsiveness For Ta
     #intro p {
         font-size: 1.25rem;
     }
+    
+    .menu-intro {
+        text-align: center;
+    }
 
-    .hero-buttons {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
+    .menu-intro h1,
+    .menu-intro p {
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .hero-buttons{
+        display:flex;
+        justify-content:flex-start;
+        flex-direction:row;
+    }
+
+    .hero-buttons.menu-btn{
+        justify-content: center;
+        margin-inline: auto;
     }
 
     .hero-buttons a {
         width: auto;
-        min-width: 180px;
+        max-width: 180px;
     }
     .cards {
         grid-template-columns: repeat(2, 1fr);
@@ -891,9 +908,10 @@ Responsiveness For Tablets   Responsiveness For Tablets    Responsiveness For Ta
 Responsiveness For Desktop   Responsiveness For Desktop    Responsiveness For Desktop
 ============================================================================================================= */
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { 
     /* Hero */
-    .hero-bg-container {
+    .hero-bg-container,
+    .menu-hero-bg {
         height: 520px; 
         min-height: auto;
     }

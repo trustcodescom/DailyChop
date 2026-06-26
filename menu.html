@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - ★ DailyChop ★</title>
+
+
+    <!--- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/menu.css" type="text/css">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <svg width="220" height="65" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FF6B35"/>
+                            <stop offset="100%" stop-color="#F7931E"/>
+                        </linearGradient>
+                    </defs>
+
+                    <circle cx="50" cy="50" r="28" fill="none" stroke="url(#grad)" stroke-width="6"/>
+
+                    <line x1="42" y1="35" x2="42" y2="65" stroke="#333" stroke-width="3"/>
+                    <line x1="38" y1="35" x2="38" y2="45" stroke="#333" stroke-width="2"/>
+                    <line x1="42" y1="35" x2="42" y2="45" stroke="#333" stroke-width="2"/>
+                    <line x1="46" y1="35" x2="46" y2="45" stroke="#333" stroke-width="2"/>
+
+                    <ellipse cx="58" cy="40" rx="4" ry="7" fill="#333"/>
+                    <line x1="58" y1="47" x2="58" y2="65" stroke="#333" stroke-width="3"/>
+
+                    <text x="95" y="45" font-family="Poppins, Arial, sans-serif" font-size="32" font-weight="700" fill="#222">
+                        Daily<tspan fill="#FF6B35">Chop</tspan>
+                    </text>
+
+                    <text x="95" y="68" font-family="Poppins, Arial, sans-serif" font-size="15" fill="#777" letter-spacing="1">
+                        From our pot to your plate
+                    </text>
+                </svg>
+            </div>
+
+            <div class="navigation-container">
+                <div>
+                    <!-- Hamburger button -->
+                    <button class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <nav class="nav" id="nav">
+                        <div class="nav-header">Menu</div>
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                <div>
+                    <a href="menu.html" class="order-now-header">Order Now!</a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+    <main>
+        <!-- Hero Section(SLIDE SHOW) -->
+        <section id="home" class="hero">
+            <div class="hero-bg-container hero-menu">
+                <div id="intro" class="menu-intro">
+                    <h1 class="reveal-left">Order Now</h1>
+                    <p>
+                        Your favorite Nigerian meals, now just a few clicks away.
+                        Browse, customize, and enjoy — hot, fresh, and home-style.
+                    </p>
+
+                    <div class="hero-buttons menu-btn">
+                        <a href="menu.html" class="btn btn-primary">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu-section">
+            <div class="menu-container">
+                <div class="menu-header">
+                    <div class="menu-heading">
+                        <h1>Explore Our Menu</h1>
+                        <p>Delicious meals made fresh, just for you.</p>
+                    </div>
+                    <div class="download-menu">
+                        <a href="file/DailyChop_Menu.pdf">
+                            <i class="fa-solid fa-download"></i>
+                            Download Menu
+                        </a>
+                    </div>
+                </div>
+
+                <div class="menu-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="Search for meals...">
+                </div>
+
+                <div class="menu-categories">
+
+                    <button class="active">
+                        <i class="fa-solid fa-border-all"></i>
+                        All
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-bowl-rice"></i>
+                        Rice
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-bowl-food"></i>
+                        Swallow
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-utensils"></i>
+                        Soups
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                        Chicken
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-fish"></i>
+                        Fish
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-glass-water"></i>
+                        Drinks
+                    </button>
+                </div>
+            </div>
+            <section class="menu-grid" id="menuGrid"></section>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <!-- F0oter section -->
+    <!-- <footer class="footer">
+        <div class="footer-bg-container">
+            <div class="footer-brand">
+                <h2>Daily<span>Chop</span></h2>
+                <p>From our pot to your plate — fresh, fast, and full of flavor.</p>
+            </div>
+            <div class="footer-container">
+
+                <div class="opening-hours">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday : 7 am  -- 10 pm</p>
+                    <p>Saturday: 10 am -- 11 pm</p>
+                    <p>Sunday: 10 am -- 8 pm</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Menu</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Lagos, Nigeria</p>
+                    <p>+234 80 381 519 07</p>
+                    <p>hello@dailychop.com</p>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank">
+                            <i class="fa-brands fa-instagram"></i> @dailychop.ng
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            <i class="fa-brands fa-facebook"></i> DailyChop NG
+                        </a>
+
+                        <a href="https://x.com" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i> @dailychop_ng
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 DailyChop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer> -->
+    <script src="js/main.js"></script>
+    <script type="module" src="js/menu.js"></script>
+    <script src="js/menu-data.js"></script>
+</body>
+</html>

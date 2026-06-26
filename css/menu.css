@@ -1,0 +1,328 @@
+
+/* =============================================================
+ Mobile css (default) 
+==================================================================*/
+.menu-section{
+    padding: 0 10px;
+    background: var(--primary);
+}
+/* =========================
+   MENU HEADER
+========================= */
+
+.menu-header{
+    margin-top: 10px;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    padding-bottom: 20px;
+}
+.menu-heading{
+    text-align: center;
+}
+.menu-heading h1{
+    font-size:1.8rem;
+    font-weight:800;
+    color:#222;
+}
+
+.menu-heading p{
+    margin-top:.4rem;
+    color:#666;
+    line-height:1.6;
+}
+.menu-container{
+    padding: 20px 0;
+}
+/* Download Button */
+
+.download-menu{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.download-menu a{
+    
+    font-weight:600;
+    padding: 15px 30px;
+    color:#fff;
+    background-color: #e65a26;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+.download-menu a:hover{
+    background:#e65926b2;
+    transform:translateY(-2px);
+}
+/* =========================
+   SEARCH BAR
+========================= */
+
+.menu-search{
+    position:relative;
+    margin-bottom:2rem;
+}
+
+.menu-search i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#999;
+}
+
+.menu-search input{
+    width:100%;
+    height:58px;
+
+    border:1px solid #ff6b3594;
+    border-radius:10px;
+
+    padding-left:48px;
+
+    font-size:1rem;
+    outline:none;
+
+    transition:.3s;
+}
+
+.menu-search input:focus{
+    border-color:#FF6B35;
+    box-shadow:0 0 0 4px rgba(255,107,53,.15);
+}
+.menu-categories{
+    display:flex;
+    gap:.8rem;
+
+    overflow-x:auto;
+    padding-bottom:.5rem;
+
+    scrollbar-width:none;
+}
+
+.menu-categories::-webkit-scrollbar{
+    display:none;
+}
+
+.menu-categories button{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+
+    white-space:nowrap;
+
+    border:none;
+    background:#fff;
+
+    padding:.9rem 1.3rem;
+
+    border-radius:50px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.menu-categories button:hover{
+    transform:translateY(-2px);
+}
+
+.menu-categories .active{
+    background:#FF6B35;
+    color:#fff;
+}
+
+.menu-categories .active i{
+    color:#fff;
+}
+
+/* ==========================
+   MENU GRID
+========================== */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1.5rem;
+    margin:2rem 0;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.menu-card{
+    width:100%;
+
+    background:#fff;
+    border-radius:18px;
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 16px 40px rgba(0,0,0,.12);
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+.menu-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.menu-card:hover img {
+    transform: scale(1.08);
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.menu-content{
+    display:flex;
+    flex-direction:column;
+
+    gap:.8rem;
+
+    padding:1.2rem;
+
+    flex:1;
+}
+
+.menu-content h3{
+    font-size:1.3rem;
+    font-weight:700;
+    color:#222;
+}
+
+.menu-content p{
+    color:#666;
+    line-height:1.6;
+
+    flex:1;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.menu-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:1rem;
+}
+
+.price{
+    font-size:1.35rem;
+    font-weight:700;
+    color:#FF6B35;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.cart-btn{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+    border:none;
+    background:#FF6B35;
+    color:#fff;
+
+    padding:.8rem 1rem;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.cart-btn:hover{
+    background:#e65a26;
+}
+
+
+
+/* =============================================================
+Tablets custome css
+==================================================================*/
+@media (min-width:768px){
+    .menu-header{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        padding: 0 30px;
+    }
+    .menu-heading{
+        text-align: left;
+    }
+    .menu-search{
+        max-width:500px;
+        margin:10px 0 20px 30px ;
+    }
+    .menu-categories{
+        justify-content: center;
+    }
+    .menu-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .menu-image {
+        height: 220px;
+    }
+}
+
+
+
+
+
+/* =============================================================
+dektop custome css
+==================================================================*/
+@media (min-width:1024px){
+
+.menu-heading h1{
+    font-size:2.5rem;
+}
+
+.menu-heading p{
+    font-size:1.05rem;
+}
+
+.menu-search{
+    max-width:500px;
+}
+.menu-grid{
+    grid-template-columns:repeat(4,1fr);
+}
+    .menu-image {
+        height: 240px;
+    }
+}
