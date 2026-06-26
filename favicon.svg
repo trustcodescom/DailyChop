@@ -1,0 +1,27 @@
+<svg width="64" height="64" viewBox="10 10 80 80" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF6B35"/>
+            <stop offset="100%" stop-color="#F7931E"/>
+        </linearGradient>
+        <style>
+            .utensil { stroke: #333333; fill: #333333; }
+            @media (prefers-color-scheme: dark) {
+                .utensil { stroke: #FFFFFF; fill: #FFFFFF; }
+            }
+        </style>
+    </defs>
+
+    <!-- Centered Logo Icon -->
+    <circle cx="50" cy="50" r="38" fill="none" stroke="url(#grad)" stroke-width="8"/>
+
+    <!-- Fork (Left) -->
+    <line x1="40" y1="30" x2="40" y2="70" class="utensil" stroke-width="4"/>
+    <line x1="34" y1="30" x2="34" y2="44" class="utensil" stroke-width="2.5"/>
+    <line x1="40" y1="30" x2="40" y2="44" class="utensil" stroke-width="2.5"/>
+    <line x1="46" y1="30" x2="46" y2="44" class="utensil" stroke-width="2.5"/>
+
+    <!-- Spoon (Right) -->
+    <ellipse cx="61" cy="37" rx="5.5" ry="9" class="utensil"/>
+    <line x1="61" y1="46" x2="61" y2="70" class="utensil" stroke-width="4"/>
+</svg>

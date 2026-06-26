@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ★ DailyChop ★</title>
+
+
+    <!--- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+</head>
+<>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <svg width="220" height="65" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FF6B35"/>
+                            <stop offset="100%" stop-color="#F7931E"/>
+                        </linearGradient>
+                    </defs>
+
+                    <circle cx="50" cy="50" r="28" fill="none" stroke="url(#grad)" stroke-width="6"/>
+
+                    <line x1="42" y1="35" x2="42" y2="65" stroke="#333" stroke-width="3"/>
+                    <line x1="38" y1="35" x2="38" y2="45" stroke="#333" stroke-width="2"/>
+                    <line x1="42" y1="35" x2="42" y2="45" stroke="#333" stroke-width="2"/>
+                    <line x1="46" y1="35" x2="46" y2="45" stroke="#333" stroke-width="2"/>
+
+                    <ellipse cx="58" cy="40" rx="4" ry="7" fill="#333"/>
+                    <line x1="58" y1="47" x2="58" y2="65" stroke="#333" stroke-width="3"/>
+
+                    <text x="95" y="45" font-family="Poppins, Arial, sans-serif" font-size="32" font-weight="700" fill="#222">
+                        Daily<tspan fill="#FF6B35">Chop</tspan>
+                    </text>
+
+                    <text x="95" y="68" font-family="Poppins, Arial, sans-serif" font-size="15" fill="#777" letter-spacing="1">
+                        From our pot to your plate
+                    </text>
+                </svg>
+            </div>
+
+            <div style="display: flex;">
+                <div>
+                    <!-- Hamburger button -->
+                    <button class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <nav class="nav" id="nav">
+                        <div class="nav-header">Menu</div>
+                        <a href="#">Home</a>
+                        <a href="#">Menu</a>
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                </div>
+                <div>
+                    <a class="order-now-header">Order Now!</a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+    <div>
+        <!-- Hero Section(SLIDE SHOW) -->
+        <section id="home" class="hero">
+            <div class="hero-bg-container"> <!-- NEW WRAPPER TO HOLD THE IMAGE -->
+                <div id="intro">
+                    <h1 class="reveal-left">The Ultimate <span>Flavor Destination</span></h1>
+                    <p>
+                        From rich jollof rice to mouthwatering local delicacies,
+                        DailyChop brings the taste of home straight to your table.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary">View Menu</a>
+                        <a href="#contact" class="btn btn-secondary">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-container">
+            <!-- Features -->
+            <div>
+                <div class="cards">
+                    <div class="card">
+                        <!-- Icon Container -->
+                        <div class="icon-box">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        
+                        <!-- Action Button -->
+                        <a href="#" class="card-btn">Place an Order</a>
+                    </div>
+                    <div class="card">
+                        <!-- Icon Container -->
+                        <div class="icon-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        
+                        <!-- Action Button -->
+                        <a href="#" class="card-btn">Nearest Branch</a>
+                    </div>
+                    <div class="card highlight-card">
+                        <!-- Icon Container -->
+                        <div class="icon-box">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        
+                        <!-- Action Button -->
+                        <a href="#" class="card-btn">Explore Flavors</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="about">
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="images/food_5.jpg" alt="Welcome to DailyChop">
+                    </div>
+
+                    <div class="about-content">
+                        <h2>
+                            Crafted with Passion,<br> <span>Served with Heart.</span>
+                        </h2>
+                        <p>
+                            Welcome to DailyChop, where culture and flavor meet on your plate.
+                            We believe that a great meal should do more than just fill you up—it should ground you.
+                            From rich local heritages to beloved global classics, we source the freshest ingredients to prepare
+                            honest food that invites you to slow down, savor the moment, and enjoy a true taste of home.
+                        </p>
+                        <div class="about-btn-link">
+                            <a href="#" class="about-us-btn">About Us</a>
+                        </div>
+                    
+                    </div>
+                </div>
+            </section>
+
+            <section class="impact-section">
+                <h2 class="impact-title">Every Bite <span>Feels Like Home</span></h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fa-solid fa-bowl-food"></i>
+                        </div>
+                        <h3>50+</h3>
+                        <p>Authentic Dishes on the Menu</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fa-solid fa-stopwatch-20"></i>
+                        </div>
+                        <h3>20 Mins</h3>
+                        <p>Average Delivery Time</p>
+                    </div>
+                    <div class="impact-card highlight-card">
+                        <div class="impact-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>4.9 Stars</h3>
+                        <p>Rated by Food Lovers Across the City</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="reviews-section">
+            <div class="reviews-container">
+                <h3 class="reviews-title">What Our Customers Are Saying</h3>
+                <p class="reviews-subtitle">Real feedback from people who keep coming back for another chop.</p>
+
+                <div class="reviews-slider">
+                    <div class="reviews-track">
+                        <div class="review-card active">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                The jollof rice was rich, smoky, and packed with flavor.
+                                It honestly tasted like home.
+                            </p>
+
+                            <div class="review-user">
+                                <img src="images/customer_5.jpg" alt="Ada M.">
+
+                                <div class="review-user-info">
+                                    <h4>Ada M.</h4>
+                                    <span>Lagos • Jollof Rice Lover</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                Delivery was fast and the food arrived hot.
+                                The chicken was perfectly seasoned.
+                            </p>
+
+                            <div class="review-user">
+                                <img src="images/customer_1.jpg" alt="David O.">
+
+                                <div class="review-user-info">
+                                    <h4>David O.</h4>
+                                    <span>Abuja</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                DailyChop has become my go-to lunch spot.
+                                Consistent quality every single time.
+                            </p>
+
+                            <div class="review-user">
+                                <img src="images/customer_4.jpg" alt="Chioma E.">
+
+                                <div class="review-user-info">
+                                    <h4>Chioma E.</h4>
+                                    <span>Port Harcourt</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                DailyChop has become my go-to lunch spot.
+                                Consistent quality every single time.
+                            </p>
+
+                            <div class="review-user">
+                                <img src="images/customer_2.jpg" alt="Chioma E.">
+
+                                <div class="review-user-info">
+                                    <h4>Patrick Johnson</h4>
+                                    <span>Port Harcourt</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                DailyChop has become my go-to lunch spot.
+                                Consistent quality every single time.
+                            </p>
+
+                            <div class="review-user">
+                                <img src="images/customer_3.jpg" alt="Chioma E.">
+
+                                <div class="review-user-info">
+                                    <h4>Obinna Samson</h4>
+                                    <span>Port Harcourt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews-controls">
+                        <button class="slider-btn prev">&#10094;</button>
+                        <button class="slider-btn next">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- F0oter section -->
+    <footer class="footer">
+        <div class="footer-bg-container">
+            <div class="footer-brand">
+                <h2>Daily<span>Chop</span></h2>
+                <p>From our pot to your plate — fresh, fast, and full of flavor.</p>
+            </div>
+            <div class="footer-container">
+
+                <div class="opening-hours">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday : 7 am  -- 10 pm</p>
+                    <p>Saturday: 10 am -- 11 pm</p>
+                    <p>Sunday: 10 am -- 8 pm</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Menu</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Lagos, Nigeria</p>
+                    <p>+234 80 381 519 07</p>
+                    <p>hello@dailychop.com</p>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank">
+                            <i class="fa-brands fa-instagram"></i> @dailychop.ng
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            <i class="fa-brands fa-facebook"></i> DailyChop NG
+                        </a>
+
+                        <a href="https://x.com" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i> @dailychop_ng
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 DailyChop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
