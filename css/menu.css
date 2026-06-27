@@ -142,12 +142,15 @@
 /* ==========================
    MENU GRID
 ========================== */
-
+.menu-grid-container{
+    margin: auto;
+    padding: 5px;
+}
 .menu-grid{
+    /* padding: px; */
     display:grid;
     grid-template-columns:1fr;
-    gap:1.5rem;
-    margin:2rem 0;
+    gap:1.8rem;
 }
 
 /* ==========================
@@ -269,7 +272,62 @@
     background:#e65a26;
 }
 
+/* order via whatsapp seection */
+.order-phone{
+    padding:5rem 1.5rem;
+}
 
+.order-container{
+    max-width:1100px;
+    margin:auto;
+    background:#0e0e0e;
+    border-radius:18px;
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+    align-items:flex-start;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.order-text h2{
+    color:#ff6b35;
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:.5rem;
+}
+
+.order-text h3{
+    font-size:2rem;
+    color:#FFFF;
+    margin-bottom:1rem;
+    line-height:1.2;
+}
+
+.order-text p{
+    color:#FFFF;
+    line-height:1.7;
+    max-width:500px;
+}
+
+.whatsapp-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:.9rem 1.8rem;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#1ebd5a;
+    transform:translateY(-3px);
+}
 
 /* =============================================================
 Tablets custome css
@@ -285,17 +343,32 @@ Tablets custome css
         text-align: left;
     }
     .menu-search{
-        max-width:500px;
+        max-width:400px;
         margin:10px 0 20px 30px ;
     }
     .menu-categories{
         justify-content: center;
     }
+    .menu-grid-container{
+        margin: auto;
+        padding: 10px;
+    }
     .menu-grid{
+        padding: 15px;
         grid-template-columns:repeat(2,1fr);
     }
     .menu-image {
         height: 220px;
+    }
+    .order-container{
+        padding: 5rem;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .order-text h3{
+        font-size:2.6rem;
     }
 }
 
@@ -317,10 +390,10 @@ dektop custome css
 }
 
 .menu-search{
-    max-width:500px;
+    max-width:450px;
 }
 .menu-grid{
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr);
 }
     .menu-image {
         height: 240px;
