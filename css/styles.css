@@ -668,7 +668,61 @@ display: none;
     font-size: 0.85rem;
     color: rgba(255,255,255,0.6);
 }
+/* floating cart */
+.floating-cart{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    background:#ff6b00;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    z-index:1000;
+    transition:.3s ease;
+}
 
+.floating-cart:hover{
+    transform:translateY(-5px) scale(1.05);
+    background:#e65f00;
+}
+
+.floating-cart i{
+    font-size:1.6rem;
+}
+
+.cart-count{
+    position:absolute;
+    top:-6px;
+    right:-6px;
+    width:26px;
+    height:26px;
+    background:#fff;
+    color:#ff6b00;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:.85rem;
+    font-weight:700;
+    border:2px solid #ff6b00;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+@keyframes cartBounce{
+    0%{transform:scale(1);}
+    40%{transform:scale(1.2);}
+    70%{transform:scale(.9);}
+    100%{transform:scale(1);}
+}
+
+.floating-cart.bump{
+    animation:cartBounce .4s ease;
+}
 
 /* ===========================================================================================================
 Responsiveness For Tablets   Responsiveness For Tablets    Responsiveness For Tablets
@@ -685,9 +739,7 @@ Responsiveness For Tablets   Responsiveness For Tablets    Responsiveness For Ta
         max-width: 1440px;
         margin: 0 auto; 
         
-        width: 100%;
         padding: 10px 40px;
-        box-sizing: border-box;
     }
     .nav {
         position: static;

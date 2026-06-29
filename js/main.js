@@ -1,108 +1,99 @@
+// ==============================
+// Mobile Navigation
+// ==============================
+
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("nav");
 const overlay = document.getElementById("overlay");
 
-hamburger.addEventListener("click", () => {
-    nav.classList.toggle("active");
-    overlay.classList.toggle("active");
+if (hamburger && nav && overlay) {
 
-    const icon = hamburger.querySelector("i");
-    icon.classList.toggle("fa-bars");
-    icon.classList.toggle("fa-xmark");
-});
+    hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        overlay.classList.toggle("active");
 
-overlay.addEventListener("click", () => {
-    nav.classList.remove("active");
-    overlay.classList.remove("active");
+        const icon = hamburger.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-xmark");
+    });
 
-    const icon = hamburger.querySelector("i");
-    icon.classList.add("fa-bars");
-    icon.classList.remove("fa-xmark");
-});
+    overlay.addEventListener("click", () => {
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
 
+        const icon = hamburger.querySelector("i");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+    });
 
-// navigation
-let lastScrollY = window.scrollY;
+}
+
+// ==============================
+// Hide Header on Scroll
+// ==============================
+
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
-    const currentY = window.scrollY;
+if (header) {
 
-    if (currentY > lastScrollY && currentY > 100) {
-        header.style.transform = "translateY(-100%)";
-    } else {
-        header.style.transform = "translateY(0)";
-    }
+    let lastScrollY = window.scrollY;
 
-    lastScrollY = currentY;
-});
+    window.addEventListener("scroll", () => {
 
+        const currentY = window.scrollY;
 
-// customer reviews
+        if (currentY > lastScrollY && currentY > 100) {
+            header.style.transform = "translateY(-100%)";
+        } else {
+            header.style.transform = "translateY(0)";
+        }
+
+        lastScrollY = currentY;
+
+    });
+
+}
+
+// ==============================
+// Customer Reviews Slider
+// ==============================
+
 const track = document.querySelector(".reviews-track");
 const cards = document.querySelectorAll(".review-card");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
+const dots = document.querySelectorAll(".dot");
 
-let currentIndex = 0;
+if (
+    track &&
+    nextBtn &&
+    prevBtn &&
+    cards.length > 0 &&
+    dots.length > 0
+) {
 
-function updateSlider() {
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    let currentIndex = 0;
 
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[currentIndex].classList.add("active");
-}
+    function updateSlider() {
 
-nextBtn.addEventListener("click", () => {
-    currentIndex++;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-    if (currentIndex >= cards.length) {
-        currentIndex = 0;
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        dots[currentIndex].classList.add("active");
+
     }
 
-    updateSlider();
-});
+    nextBtn.addEventListener("click", () => {
 
-prevBtn.addEventListener("click", () => {
-    currentIndex--;
-
-    if (currentIndex < 0) {
-        currentIndex = cards.length - 1;
-    }
-
-    updateSlider();
-});
-
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % cards.length;
-    updateSlider();
-}, 5000);
-
-let startX = 0;
-let endX = 0;
-
-track.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-});
-
-track.addEventListener("touchend", (e) => {
-    endX = e.changedTouches[0].clientX;
-
-    const swipeDistance = startX - endX;
-
-    // Swipe left
-    if (swipeDistance > 50) {
-        currentIndex++;
-
-        if (currentIndex >= cards.length) {
-            currentIndex = 0;
-        }
+        currentIndex = (currentIndex + 1) % cards.length;
 
         updateSlider();
-    }
 
-    // Swipe right
-    if (swipeDistance < -50) {
+    });
+
+    prevBtn.addEventListener("click", () => {
+
         currentIndex--;
 
         if (currentIndex < 0) {
@@ -110,15 +101,64 @@ track.addEventListener("touchend", (e) => {
         }
 
         updateSlider();
-    }
-});
 
-// carousel indicators
-const dots = document.querySelectorAll(".dot");
-dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-        currentIndex = index;
-        updateSlider();
     });
-});
 
+    setInterval(() => {
+
+        currentIndex = (currentIndex + 1) % cards.length;
+
+        updateSlider();
+
+    }, 5000);
+
+    let startX = 0;
+    let endX = 0;
+
+    track.addEventListener("touchstart", e => {
+
+        startX = e.touches[0].clientX;
+
+    });
+
+    track.addEventListener("touchend", e => {
+
+        endX = e.changedTouches[0].clientX;
+
+        const swipeDistance = startX - endX;
+
+        if (swipeDistance > 50) {
+
+            currentIndex = (currentIndex + 1) % cards.length;
+
+            updateSlider();
+
+        }
+
+        if (swipeDistance < -50) {
+
+            currentIndex--;
+
+            if (currentIndex < 0) {
+                currentIndex = cards.length - 1;
+            }
+
+            updateSlider();
+
+        }
+
+    });
+
+    dots.forEach((dot, index) => {
+
+        dot.addEventListener("click", () => {
+
+            currentIndex = index;
+
+            updateSlider();
+
+        });
+
+    });
+
+}

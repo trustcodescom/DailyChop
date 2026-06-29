@@ -11,7 +11,7 @@
 
     <!-- Custom css -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link rel="stylesheet" href="css/menu.css" type="text/css">
+    <link rel="stylesheet" href="css/success.css" type="text/css">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
 </head>
@@ -69,97 +69,41 @@
         </div>
         <div class="overlay" id="overlay"></div>
     </header>
-    <main>
-        <!-- Hero Section(SLIDE SHOW) -->
-        <section id="home" class="hero">
-            <div class="hero-bg-container hero-menu">
-                <div id="intro" class="menu-intro">
-                    <h1 class="reveal-left">Order Now</h1>
-                    <p>
-                        Your favorite Nigerian meals, now just a few clicks away.
-                        Browse, customize, and enjoy — hot, fresh, and home-style.
-                    </p>
+    <main class="success-container">
 
-                    <div class="hero-buttons menu-btn">
-                        <a href="menu.html" class="btn btn-primary">Order Now</a>
-                    </div>
-                </div>
+        <div class="success-card">
+
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
             </div>
-        </section>
-        <section class="menu-section">
-            <div class="menu-container">
-                <div class="menu-header">
-                    <div class="menu-heading">
-                        <h1>Explore Our Menu</h1>
-                        <p>Delicious meals made fresh, just for you.</p>
-                    </div>
-                    <div class="download-menu">
-                        <a href="file/DailyChop_Menu.pdf">
-                            <i class="fa-solid fa-download"></i>
-                            Download Menu
-                        </a>
-                    </div>
-                </div>
 
-                <div class="menu-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" id="searchInput" placeholder="Search for meals...">
-                </div>
+            <h1>Order Ready!</h1>
 
-                <div class="menu-categories">
+            <p>
+                Your order details have been prepared successfully.
+            </p>
 
-                    <button class="active" data-category="all">
-                        <i class="fa-solid fa-border-all"></i>
-                        All
-                    </button>
+            <p>
+                Please send the WhatsApp message that was opened to complete your order.
+            </p>
 
-                    <button data-category="rice">
-                        <i class="fa-solid fa-bowl-rice"></i>
-                        Rice
-                    </button>
+            <div class="success-buttons">
 
-                    <button data-category="swallow">
-                        <i class="fa-solid fa-bowl-food"></i>
-                        Swallow
-                    </button>
+                <a href="menu.html" class="secondary-btn">
+                    Continue Shopping
+                </a>
 
-                    <button data-category="soup">
-                        <i class="fa-solid fa-utensils"></i>
-                        Soups
-                    </button>
+                <button id="homeBtn" class="primary-btn">
+                    Back to Home
+                </button>
 
-                    <button data-category="chicken">
-                        <i class="fa-solid fa-drumstick-bite"></i>
-                        Chicken
-                    </button>
-
-                    <button data-category="drink">
-                        <i class="fa-solid fa-glass-water"></i>
-                        Drinks
-                    </button>
-                </div>
-                <div class="menu-grid-container">
-                    <div class="menu-grid" id="menuGrid"></div>
-                </div>
             </div>
-            <section class="order-phone">
-                <div class="order-container">
-                    <div class="order-text">
-                        <h2>On the Go?</h2>
-                        <h3>Order From Your Phone</h3>
-                        <p>
-                            Skip the queue and enjoy your favorite meals delivered fresh.
-                            Place your order in minutes through WhatsApp.
-                        </p>
-                    </div>
 
-                    <a href="#home" class="whatsapp-btn">
-                        Order via WhatsApp
-                    </a>
-                </div>
-            </section>
-        </section>
+        </div>
+
     </main>
+
+    
 
     <!-- F0oter section -->
     <footer class="footer">
@@ -218,13 +162,13 @@
     </footer>
 
 
-    <a href="cart.html" class="floating-cart">
+    <!-- <a href="cart.html" class="floating-cart">
         <i class="fa-solid fa-cart-shopping"></i>
         <span class="cart-count">0</span>
-    </a>
+    </a> -->
 
 
     <script src="js/main.js"></script>
-    <script type="module" src="js/menu.js"></script>
+    <script type="module" src="js/success.js"></script>
 </body>
 </html>

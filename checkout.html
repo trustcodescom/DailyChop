@@ -11,7 +11,7 @@
 
     <!-- Custom css -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link rel="stylesheet" href="css/menu.css" type="text/css">
+    <link rel="stylesheet" href="css/checkout.css" type="text/css">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
 </head>
@@ -69,97 +69,83 @@
         </div>
         <div class="overlay" id="overlay"></div>
     </header>
-    <main>
-        <!-- Hero Section(SLIDE SHOW) -->
-        <section id="home" class="hero">
-            <div class="hero-bg-container hero-menu">
-                <div id="intro" class="menu-intro">
-                    <h1 class="reveal-left">Order Now</h1>
-                    <p>
-                        Your favorite Nigerian meals, now just a few clicks away.
-                        Browse, customize, and enjoy — hot, fresh, and home-style.
+    <section class="checkout-container">
+        <div class="checkout-form">
+            <h2>Contact Information</h2>
+            <form id="checkoutForm">
+                <input type="email" id="email" placeholder="Email Address" required>
+                <div class="two-inputs">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <input type="text" id="address" placeholder="Address" required>
+                <div class="two-inputs">
+                    <input type="text" id="city" placeholder="City" required>
+                    <select required id="state">
+                        <option>Lagos</option>
+                        <option>Abuja</option>
+                        <option>Oyo</option>
+                    </select>
+                </div>
+                <input type="tel" id="phone" placeholder="Phone Number (Optional)">
+                <div class="payments">
+                    <h3 class="payment-title">Payment Options</h3>
+                    <div class="payment-option active">
+
+                        <div class="payment-left">
+
+                            <input type="radio" id="whatsapp" name="payment" checked>
+                            <label for="whatsapp">
+                                <h4>WhatsApp Checkout</h4>
+                                <p>Place order and pay via WhatsApp</p>
+                            </label>
+                        </div>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+
+                    <div class="order-note">
+
+                        <label class="note-label">
+                            <input type="checkbox" id="addNote">
+                            Add a note to your order
+                        </label>
+
+                        <textarea
+                            id="note"
+                            placeholder="Write your note here..."
+                        ></textarea>
+
+                    </div>
+
+                    <p class="checkout-policy">
+                        By proceeding with your purchase you agree to our
+                        <a href="#">Terms and Conditions</a> and
+                        <a href="#">Privacy Policy</a>.
                     </p>
-
-                    <div class="hero-buttons menu-btn">
-                        <a href="menu.html" class="btn btn-primary">Order Now</a>
-                    </div>
                 </div>
+                <button type="submit">
+                    <i class="fa-brands fa-whatsapp"></i>Checkout via WhatsApp
+                </button>
+            </form>
+        </div>
+        <aside class="order-summary">
+            <h2>Order Summary</h2>
+            <div id="orderItems"></div>
+            <hr>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">₦0</span>
             </div>
-        </section>
-        <section class="menu-section">
-            <div class="menu-container">
-                <div class="menu-header">
-                    <div class="menu-heading">
-                        <h1>Explore Our Menu</h1>
-                        <p>Delicious meals made fresh, just for you.</p>
-                    </div>
-                    <div class="download-menu">
-                        <a href="file/DailyChop_Menu.pdf">
-                            <i class="fa-solid fa-download"></i>
-                            Download Menu
-                        </a>
-                    </div>
-                </div>
-
-                <div class="menu-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" id="searchInput" placeholder="Search for meals...">
-                </div>
-
-                <div class="menu-categories">
-
-                    <button class="active" data-category="all">
-                        <i class="fa-solid fa-border-all"></i>
-                        All
-                    </button>
-
-                    <button data-category="rice">
-                        <i class="fa-solid fa-bowl-rice"></i>
-                        Rice
-                    </button>
-
-                    <button data-category="swallow">
-                        <i class="fa-solid fa-bowl-food"></i>
-                        Swallow
-                    </button>
-
-                    <button data-category="soup">
-                        <i class="fa-solid fa-utensils"></i>
-                        Soups
-                    </button>
-
-                    <button data-category="chicken">
-                        <i class="fa-solid fa-drumstick-bite"></i>
-                        Chicken
-                    </button>
-
-                    <button data-category="drink">
-                        <i class="fa-solid fa-glass-water"></i>
-                        Drinks
-                    </button>
-                </div>
-                <div class="menu-grid-container">
-                    <div class="menu-grid" id="menuGrid"></div>
-                </div>
+            <div class="summary-row">
+                <span>Delivery</span>
+                <span id="deliveryFee">₦0</span>
             </div>
-            <section class="order-phone">
-                <div class="order-container">
-                    <div class="order-text">
-                        <h2>On the Go?</h2>
-                        <h3>Order From Your Phone</h3>
-                        <p>
-                            Skip the queue and enjoy your favorite meals delivered fresh.
-                            Place your order in minutes through WhatsApp.
-                        </p>
-                    </div>
-
-                    <a href="#home" class="whatsapp-btn">
-                        Order via WhatsApp
-                    </a>
-                </div>
-            </section>
-        </section>
-    </main>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span id="grandTotal">₦0</span>
+            </div>
+        </aside>
+    </section>
 
     <!-- F0oter section -->
     <footer class="footer">
@@ -225,6 +211,6 @@
 
 
     <script src="js/main.js"></script>
-    <script type="module" src="js/menu.js"></script>
+    <script type="module" src="js/checkout.js"></script>
 </body>
 </html>

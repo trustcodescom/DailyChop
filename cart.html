@@ -11,7 +11,7 @@
 
     <!-- Custom css -->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link rel="stylesheet" href="css/menu.css" type="text/css">
+    <link rel="stylesheet" href="css/cart.css" type="text/css">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
 </head>
@@ -69,97 +69,94 @@
         </div>
         <div class="overlay" id="overlay"></div>
     </header>
-    <main>
-        <!-- Hero Section(SLIDE SHOW) -->
-        <section id="home" class="hero">
-            <div class="hero-bg-container hero-menu">
-                <div id="intro" class="menu-intro">
-                    <h1 class="reveal-left">Order Now</h1>
-                    <p>
-                        Your favorite Nigerian meals, now just a few clicks away.
-                        Browse, customize, and enjoy — hot, fresh, and home-style.
-                    </p>
+    <main class="cart-page">
 
-                    <div class="hero-buttons menu-btn">
-                        <a href="menu.html" class="btn btn-primary">Order Now</a>
-                    </div>
-                </div>
+        <!-- ================= CART ================= -->
+
+        <section class="cart-section">
+
+            <div class="cart-title">
+                <h1>Your Cart</h1>
+                <p>Your delicious meals are almost on the way.</p>
             </div>
-        </section>
-        <section class="menu-section">
-            <div class="menu-container">
-                <div class="menu-header">
-                    <div class="menu-heading">
-                        <h1>Explore Our Menu</h1>
-                        <p>Delicious meals made fresh, just for you.</p>
-                    </div>
-                    <div class="download-menu">
-                        <a href="file/DailyChop_Menu.pdf">
-                            <i class="fa-solid fa-download"></i>
-                            Download Menu
-                        </a>
-                    </div>
-                </div>
 
-                <div class="menu-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" id="searchInput" placeholder="Search for meals...">
-                </div>
+            <!-- JS inserts items here -->
+            <div id="cartItems" class="cart-items">
 
-                <div class="menu-categories">
-
-                    <button class="active" data-category="all">
-                        <i class="fa-solid fa-border-all"></i>
-                        All
-                    </button>
-
-                    <button data-category="rice">
-                        <i class="fa-solid fa-bowl-rice"></i>
-                        Rice
-                    </button>
-
-                    <button data-category="swallow">
-                        <i class="fa-solid fa-bowl-food"></i>
-                        Swallow
-                    </button>
-
-                    <button data-category="soup">
-                        <i class="fa-solid fa-utensils"></i>
-                        Soups
-                    </button>
-
-                    <button data-category="chicken">
-                        <i class="fa-solid fa-drumstick-bite"></i>
-                        Chicken
-                    </button>
-
-                    <button data-category="drink">
-                        <i class="fa-solid fa-glass-water"></i>
-                        Drinks
-                    </button>
-                </div>
-                <div class="menu-grid-container">
-                    <div class="menu-grid" id="menuGrid"></div>
-                </div>
             </div>
-            <section class="order-phone">
-                <div class="order-container">
-                    <div class="order-text">
-                        <h2>On the Go?</h2>
-                        <h3>Order From Your Phone</h3>
-                        <p>
-                            Skip the queue and enjoy your favorite meals delivered fresh.
-                            Place your order in minutes through WhatsApp.
-                        </p>
-                    </div>
 
-                    <a href="#home" class="whatsapp-btn">
-                        Order via WhatsApp
-                    </a>
-                </div>
-            </section>
         </section>
+
+
+        <!-- ================= SUMMARY ================= -->
+
+        <aside class="summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">₦0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery Fee</span>
+                <span>Calculated Later</span>
+            </div>
+
+            <div class="summary-row total">
+                <span>Total</span>
+                <span id="total">₦0</span>
+            </div>
+
+            <a href="checkout.html" class="checkout-btn">
+                Proceed to Checkout
+            </a>
+
+            <div class="summary-divider">
+                <span>OR</span>
+            </div>
+
+            <a href="menu.html" class="continue-btn">
+                Continue Shopping
+            </a>
+
+            <div class="delivery-note">
+
+                <div>
+                    <i class="fa-solid fa-clock"></i>
+                    Estimated delivery: 30 - 60 mins
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Delivery fee calculated after address
+                </div>
+
+            </div>
+
+        </aside>
+
     </main>
+
+    <!-- ================= EMPTY CART ================= -->
+
+    <section id="emptyCart" class="empty-cart">
+        <div class="empty-cart-container">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="empty-cart-details">
+                <h2>Your cart is empty</h2>
+                <p>
+                    Looks like you haven't added any meals yet.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="empty-cart-browse">
+            <a href="menu.html"> Browse Menu</a>
+        </div>
+    </section>
 
     <!-- F0oter section -->
     <footer class="footer">
@@ -217,14 +214,7 @@
         </div>
     </footer>
 
-
-    <a href="cart.html" class="floating-cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span class="cart-count">0</span>
-    </a>
-
-
     <script src="js/main.js"></script>
-    <script type="module" src="js/menu.js"></script>
+    <script type="module" src="js/carts.js"></script>
 </body>
 </html>

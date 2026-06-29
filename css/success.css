@@ -1,0 +1,153 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f7f7;
+    color:#222;
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success-container{
+    width:min(92%,500px);
+    min-height:100vh;
+
+    margin:auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.success-card{
+
+    background:#fff;
+
+    padding:40px 25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.success-icon{
+
+    font-size:5rem;
+
+    color:#28a745;
+
+    margin-bottom:20px;
+
+}
+
+.success-card h1{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.success-card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:12px;
+
+}
+
+.success-buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+    display:block;
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.primary-btn{
+
+    border:none;
+
+    background:#ff5b2e;
+
+    color:#fff;
+
+}
+
+.primary-btn:hover{
+
+    background:#e54d22;
+
+}
+
+.secondary-btn{
+
+    border:2px solid #ff5b2e;
+
+    color:#ff5b2e;
+
+}
+
+.secondary-btn:hover{
+
+    background:#ff5b2e;
+
+    color:#fff;
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(min-width:768px){
+
+    .success-buttons{
+
+        flex-direction:row;
+
+    }
+
+}
