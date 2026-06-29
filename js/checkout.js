@@ -93,7 +93,8 @@ function setupCheckoutForm() {
         const city = document.getElementById("city").value;
         const state = document.getElementById("state").value;
         const phone = document.getElementById("phone").value;
-
+        const note = document.getElementById("note").value.trim();
+        
         const { cart, subtotal, delivery, grandTotal } = renderOrderSummary();
 
         let message = `*NEW DAILYCHOP ORDER*%0A%0A`;
@@ -105,6 +106,11 @@ function setupCheckoutForm() {
         message += `Address: ${address}%0A`;
         message += `City: ${city}%0A`;
         message += `State: ${state}%0A%0A`;
+
+        if (note) {
+            message += `*Order Note*%0A`;
+            message += `${note}%0A%0A`;
+        }
 
         message += `*Order Items*%0A`;
 
