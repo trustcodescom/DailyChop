@@ -142,7 +142,16 @@
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
     url("../images/menu_hero.jpg");
 }
-
+.hero-about{
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.795), rgba(0, 0, 0, 0.322)),
+    url("../images/about_hero.webp");
+}
+.hero-contact{
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.795), rgba(0, 0, 0, 0.322)),
+    url("../images/contact_hero.webp");
+}
 #intro {
     color: #fff;
     width: 100%;
@@ -172,7 +181,7 @@
 
 .hero-buttons a {
     width: 100%;
-    padding: 14px 32px;
+    padding: 14px 42px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;

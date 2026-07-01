@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - ★ DailyChop ★</title>
+
+
+    <!--- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/about.css" type="text/css">
+    <link rel="stylesheet" href="contact.css" type="text/css">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <svg width="220" height="65" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#FF6B35"/>
+                            <stop offset="100%" stop-color="#F7931E"/>
+                        </linearGradient>
+                    </defs>
+
+                    <circle cx="50" cy="50" r="28" fill="none" stroke="url(#grad)" stroke-width="6"/>
+
+                    <line x1="42" y1="35" x2="42" y2="65" stroke="#333" stroke-width="3"/>
+                    <line x1="38" y1="35" x2="38" y2="45" stroke="#333" stroke-width="2"/>
+                    <line x1="42" y1="35" x2="42" y2="45" stroke="#333" stroke-width="2"/>
+                    <line x1="46" y1="35" x2="46" y2="45" stroke="#333" stroke-width="2"/>
+
+                    <ellipse cx="58" cy="40" rx="4" ry="7" fill="#333"/>
+                    <line x1="58" y1="47" x2="58" y2="65" stroke="#333" stroke-width="3"/>
+
+                    <text x="95" y="45" font-family="Poppins, Arial, sans-serif" font-size="32" font-weight="700" fill="#222">
+                        Daily<tspan fill="#FF6B35">Chop</tspan>
+                    </text>
+
+                    <text x="95" y="68" font-family="Poppins, Arial, sans-serif" font-size="15" fill="#777" letter-spacing="1">
+                        From our pot to your plate
+                    </text>
+                </svg>
+            </div>
+
+            <div class="navigation-container">
+                <div>
+                    <!-- Hamburger button -->
+                    <button class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <nav class="nav" id="nav">
+                        <div class="nav-header">Menu</div>
+                        <a href="index.html">Home</a>
+                        <a href="menu.html">Menu</a>
+                        <a href="cart.html">Cart</a>
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+                <div>
+                    <a href="menu.html" class="order-now-header">Order Now!</a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+    <!-- Hero Section(SLIDE SHOW) -->
+    <section id="home" class="hero">
+        <div class="hero-bg-container hero-contact">
+            <div id="intro" class="menu-intro">
+                <h1 class="reveal-left">Contact DailyChop</h1>
+                <p>
+                    Fresh Meals. Fast Delivery. Great Taste.
+                </p>
+
+                <div class="hero-buttons menu-btn">
+                    <a href="menu.html" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="contact-section-container">
+            <!-- ------------- CONTACT SECTION -------- -->
+            <section class="contact-section">
+                <div class="container">
+
+                    <!-- Section Heading -->
+                    <div class="section-title">
+                        <h2>Get In Touch</h2>
+                        <p>
+                            We'd love to hear from you. Whether you have a question about
+                            your order, need assistance, or simply want to say hello, our
+                            team is here to help.
+                        </p>
+                    </div>
+
+                    <div class="contact-wrapper">
+                        <!-- Contact Details -->
+                        <aside class="contact-info">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h3>Our Location</h3>
+                                    <p>Ogijo 121101 Ikorodu Lagos, Ogun State</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+
+                                <div>
+                                    <h3>Call Us</h3>
+                                    <a href="tel:+2348000000000">+234 80 381 519 07</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3>Email Us</h3>
+                                    <a href="mailto:patricktrust56@gmail.com">
+                                        hello@dailychop.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="whatsapp-box">
+
+                                <h3>Need a Quick Reply?</h3>
+
+                                <p>
+                                    Chat with us directly on WhatsApp for faster support.
+                                </p>
+
+                                <a href="#" class="whatsapp-btn">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chat on WhatsApp
+                                </a>
+
+                            </div>
+
+                        </aside>
+
+                        <!-- Contact Form -->
+                        <div class="contact-form">
+
+                            <form id="contactForm">
+
+                                <div class="input-group">
+                                    <label>Full Name</label>
+                                    <input
+                                        name="name"
+                                        type="text"
+                                        placeholder="Enter your full name"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Email Address</label>
+                                    <input name="email"
+                                        type="email"
+                                        placeholder="Enter your email"
+                                        required
+                                    >
+                                </div>
+                                <div class="input-group">
+                                    <label for="phone">Phone Number (Optional)</label>
+                                    <input
+                                        id="phone"
+                                        name="phone"
+                                        type="tel"
+                                        placeholder="+234..."
+                                    >
+                                </div>
+                                <div class="input-group">
+                                    <label>Subject</label>
+
+                                    <select name="subject" required>
+                                        <option value="">Choose a subject</option>
+                                        <option>General Inquiry</option>
+                                        <option>Order Support</option>
+                                        <option>Delivery Question</option>
+                                        <option>Feedback</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Your Message</label>
+
+                                    <textarea
+                                        rows="6"
+                                        name="message"
+                                        placeholder="Write your message..."
+                                        required
+                                    ></textarea>
+                                </div>
+
+
+                                <div class="g-recaptcha"
+                                    data-sitekey="6LeTsT8tAAAAAGjU8axYy9pkh0wGXoDCDpbDYY-t">
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    Send Message
+                                </button>
+                                <p class="form-message"></p>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- =======================
+                LOCATION
+            ======================== -->
+
+            <section class="location-section">
+                <div class="container">
+
+                    <div class="section-title">
+                        <span class="section-tag">Location</span>
+                        <h2>Find Us</h2>
+                        <p>
+                            Whether you're picking up your order or visiting us,
+                            we're easy to locate.
+                        </p>
+                    </div>
+
+                    <div class="map-card">
+
+                        <div class="map-card">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.652303272768!2d3.5098156741332014!3d6.689917821208845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103be90009c7f0f3%3A0xb7a1a7ddb5d71acc!2sOgijo%20ikorodu%20Lagos!5e0!3m2!1sen!2sng!4v1782849344530!5m2!1sen!2sng"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="strict-origin-when-cross-origin">
+                            </iframe>
+                        </div>
+
+                    </div>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=15+ABC+Street+Ogijo+Ogun+State+Nigeria"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="map-btn">
+
+                        <i class="fas fa-location-arrow"></i>
+                        Get Directions
+
+                    </a>
+                </div>
+            </section>
+
+
+            <!-- =======================
+                FAQ
+            ======================== -->
+
+            <section class="faq-section">
+                <div class="container">
+
+                    <div class="section-title">
+                        <span class="section-tag">FAQ</span>
+                        <h2>Frequently Asked Questions</h2>
+                        <p>
+                            Here are answers to some of the questions we receive most often.
+                        </p>
+                    </div>
+
+                    <div class="faq-container">
+
+                        <details class="faq-item">
+                            <summary>How do I place an order?</summary>
+                            <p>
+                                Browse our menu, add your favourite meals to the cart,
+                                then proceed to checkout and complete your order.
+                            </p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Do you offer home delivery?</summary>
+                            <p>
+                                Yes. Delivery is available within our service areas.
+                            </p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>What payment methods do you accept?</summary>
+                            <p>
+                                Payment instructions will be provided during checkout.
+                            </p>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>How long does delivery take?</summary>
+                            <p>
+                                Delivery time depends on your location, but we always
+                                aim to get your meal to you as quickly as possible.
+                            </p>
+                        </details>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+    
+        <!------- CTA -------->
+
+        <section class="cta-section">
+            <h1>Ready to Enjoy Delicious Nigerian Meals?</h1>
+            <p>
+                Browse our menu and discover your next favorite meal today.
+            </p>
+            <a href="menu.html" class="btn">
+                Explore Our Menu
+            </a>
+        </section>
+    
+
+    <!-- F0oter section -->
+    <footer class="footer">
+        <div class="footer-bg-container">
+            <div class="footer-brand">
+                <h2>Daily<span>Chop</span></h2>
+                <p>From our pot to your plate — fresh, fast, and full of flavor.</p>
+            </div>
+            <div class="footer-container">
+
+                <div class="opening-hours">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday : 7 am  -- 10 pm</p>
+                    <p>Saturday: 10 am -- 11 pm</p>
+                    <p>Sunday: 10 am -- 8 pm</p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Menu</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Lagos, Nigeria</p>
+                    <p>+234 80 381 519 07</p>
+                    <p>hello@dailychop.com</p>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank">
+                            <i class="fa-brands fa-instagram"></i> @dailychop.ng
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            <i class="fa-brands fa-facebook"></i> DailyChop NG
+                        </a>
+
+                        <a href="https://x.com" target="_blank">
+                            <i class="fa-brands fa-x-twitter"></i> @dailychop_ng
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 DailyChop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="cart.html" class="floating-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+    </a>
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
