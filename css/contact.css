@@ -35,7 +35,7 @@ body{
 }
 
 .container{
-    width:min(1200px,92%);
+    width:min(1200px,100%);
     margin:auto;
 }
 

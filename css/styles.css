@@ -134,13 +134,13 @@
 .hero-home{
     background-image:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url("../images/food_2.jpg");
+    url("../images/home_hero.webp");
 }
 
 .hero-menu{
     background-image:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url("../images/menu_hero.jpg");
+    url("../images/menu_hero3.webp");
 }
 .hero-about{
     background-image:
